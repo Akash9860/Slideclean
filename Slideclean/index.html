@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SlideClean - Professional Window and Door Services</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <button class="book-button" data-service="window_cleaning">Book Now</button>
+
+    <style>
+        /* Add your custom styles here */
+        .hidden {
+            display: none;
+        }
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1000; /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgb(0,0,0); /* Fallback color */
+            background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+        }
+        .modal-content {
+            background-color: #fefefe;
+            margin: 15% auto; /* 10% from the top and centered */
+            padding: 20px;
+            border: 1px solid #888;
+            width: 90%; /* Could be more or less, depending on screen size */
+            max-width: 500px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">SlideClean</div>
+            <ul class="nav-links">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <h1>Professional Window and Door Services</h1>
+            <p>Get your windows sparkling clean or upgrade your home with our expert services!</p>
+            <a href="#services" class="cta-button">Explore Our Services</a>
+        </section>
+
+        <section id="services" class="services">
+            <h2>Our Services</h2>
+            <div class="service-grid">
+                <div class="service-card" data-service="window_cleaning">
+                    <i data-feather="droplet"></i>
+                    <h3>Window Cleaning</h3>
+                    <p>Crystal clear views, every time.</p>
+                    <button class="book-button" data-service="window_cleaning">Book Now</button>
+                </div>
+                <div class="service-card" data-service="new_door">
+                    <i data-feather="layout"></i>
+                    <h3>New Door Installation</h3>
+                    <p>Enhance your home's entrance.</p>
+                    <button class="book-button" data-service="new_door">Book Now</button>
+                </div>
+                <div class="service-card" data-service="new_window">
+                    <i data-feather="square"></i>
+                    <h3>New Window Installation</h3>
+                    <p>Upgrade to energy-efficient windows.</p>
+                    <button class="book-button" data-service="new_window">Book Now</button>
+                </div>
+                <div class="service-card" data-service="partition">
+                    <i data-feather="grid"></i>
+                    <h3>Partition Installation</h3>
+                    <p>Optimize your space with style.</p>
+                    <button class="book-button" data-service="partition">Book Now</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="booking" class="booking hidden">
+            <form action="https://submit-form.com/cv4ODOXr2" method="POST" id="booking-form">
+                <h2>Book Your Service</h2>
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="date">Preferred Date</label>
+                    <input type="date" id="date" name="date" required>
+                </div>
+                <div class="form-group">
+                    <label for="image">Upload Image (optional)</label>
+                    <input type="file" id="image" name="image" accept="image/*">
+                </div>
+                <div class="form-group">
+                    <label for="notes">Additional Notes</label>
+                    <textarea id="notes" name="notes"></textarea>
+                </div>
+                <button type="submit" class="submit-button">Book Now</button>
+            </form>
+        </section>
+
+        <section id="about" class="about">
+            <h2>About Us</h2>
+            <div class="founders">
+                <div class="founder-card">
+                    <img src="/placeholder.svg?height=200&width=200" alt="John Doe">
+                    <h3>Tarashankar Patel</h3>
+                    <p class="role">Founder</p>
+                    <p>Tarashankar Patel founded SlideClean in 2002 with a vision to revolutionize window cleaning services.</p>
+                </div>
+                <div class="founder-card">
+                    <img src="/placeholder.svg?height=200&width=200" alt="Jane Smith">
+                    <h3>Akash Patel</h3>
+                    <p class="role">Co-Founder</p>
+                    <p>Akash Patel joined as co-founder in 2002, bringing his expertise in business management.</p>
+                </div>
+            </div>
+            <div class="clients">
+                <h3>Our Clients</h3>
+                <div class="client-logos">
+                    <img src="/placeholder.svg?height=100&width=100" alt="Tata">
+                    <img src="/placeholder.svg?height=100&width=100" alt="Monginis">
+                    <img src="/placeholder.svg?height=100&width=100" alt="Reliance">
+                    <img src="/placeholder.svg?height=100&width=100" alt="Infosys">
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <h2>Contact Us</h2>
+            <div class="contact-methods">
+                <a href="tel:+1234567890" class="contact-button">
+                    <i data-feather="phone"></i>
+                    Call Us
+                </a>
+                <a href="mailto:patel7741808425@gmail.com" class="contact-button">
+                    <i data-feather="mail"></i>
+                    Email Us
+                </a>
+                <a href="https://wa.me/1234567890" target="_blank" class="contact-button">
+                    <i data-feather="message-circle"></i>
+                    WhatsApp
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 SlideClean. All rights reserved.</p>
+        <div class="footer-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+        </div>
+    </footer>
+
+    <div id="confirmation-modal" class="modal hidden">
+        <div class="modal-content">
+            <h2>Booking Confirmed</h2>
+            <p>Your service has been booked successfully. We'll contact you soon with further details.</p>
+            <button id="close-modal" class="close-button">Close</button>
+        </div>
+    </div>
+
+    <script>
+        // Get all the buttons that will trigger the booking form
+        const bookButtons = document.querySelectorAll('.book-button');
+        const bookingSection = document.getElementById('booking');
+
+        // Add click event listeners to each button
+        bookButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Show the booking section
+                bookingSection.classList.remove('hidden');
+                // Scroll to the booking section
+                bookingSection.scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+
+        // Close modal
+        const closeModal = document.getElementById('close-modal');
+        closeModal.addEventListener('click', () => {
+            const modal = document.getElementById('confirmation-modal');
+            modal.classList.add('hidden');
+        });
+    </script>
+</body>
+</html>

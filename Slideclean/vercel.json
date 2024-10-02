@@ -1,0 +1,12 @@
+{
+    "builds": [
+      {
+        "src": "min.js",
+        "use": "@vercel/node"
+      }
+    ],
+    "routes": [
+      { "src": "/(.*)", "dest": "/min.js" }
+    ]
+  }
+  
